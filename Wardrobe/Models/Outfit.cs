@@ -22,7 +22,7 @@ namespace Wardrobe.Models
     
         public virtual Accessory Accessory { get; set; }
         public virtual Bottom Bottom { get; set; }
-        public virtual Sho Sho { get; set; }
+        public virtual Shoe Shoe { get; set; }
         public virtual Top Top { get; set; }
     }
 }
