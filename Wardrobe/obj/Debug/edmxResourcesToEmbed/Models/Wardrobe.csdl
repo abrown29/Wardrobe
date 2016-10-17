@@ -6,7 +6,7 @@
     </Key>
     <Property Name="AccessoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="Photo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Photo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Color" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Season" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
@@ -19,7 +19,7 @@
     </Key>
     <Property Name="BottomID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="Photo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Photo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Color" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Season" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
@@ -37,7 +37,7 @@
     <Property Name="AccessoryID" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Accessory" Relationship="Self.FK_Outfits_Accessories" FromRole="Outfits" ToRole="Accessories" />
     <NavigationProperty Name="Bottom" Relationship="Self.FK_Outfits_Bottoms" FromRole="Outfits" ToRole="Bottoms" />
-    <NavigationProperty Name="Sho" Relationship="Self.FK_Outfits_Shoes" FromRole="Outfits" ToRole="Shoes" />
+    <NavigationProperty Name="Shoe" Relationship="Self.FK_Outfits_Shoes" FromRole="Outfits" ToRole="Shoes" />
     <NavigationProperty Name="Top" Relationship="Self.FK_Outfits_Tops" FromRole="Outfits" ToRole="Tops" />
   </EntityType>
   <EntityType Name="Shoe">
@@ -46,7 +46,7 @@
     </Key>
     <Property Name="ShoeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="Photo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Photo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Color" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Season" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
@@ -59,7 +59,7 @@
     </Key>
     <Property Name="TopID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="Photo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Photo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Color" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Season" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />

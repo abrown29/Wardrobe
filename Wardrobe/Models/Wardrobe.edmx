@@ -4,14 +4,14 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="WardrobeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="WardrobeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Accessories">
           <Key>
             <PropertyRef Name="AccessoryID" />
           </Key>
           <Property Name="AccessoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="Photo" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Photo" Type="nvarchar" MaxLength="50" />
           <Property Name="Type" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Color" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Season" Type="nvarchar" MaxLength="50" />
@@ -23,7 +23,7 @@
           </Key>
           <Property Name="BottomID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="Photo" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Photo" Type="nvarchar" MaxLength="50" />
           <Property Name="Type" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Color" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Season" Type="nvarchar" MaxLength="50" />
@@ -45,7 +45,7 @@
           </Key>
           <Property Name="ShoeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="Photo" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Photo" Type="nvarchar" MaxLength="50" />
           <Property Name="Type" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Color" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Season" Type="nvarchar" MaxLength="50" />
@@ -57,7 +57,7 @@
           </Key>
           <Property Name="TopID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="Photo" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Photo" Type="nvarchar" MaxLength="50" />
           <Property Name="Type" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Color" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Season" Type="nvarchar" MaxLength="50" />
@@ -134,8 +134,7 @@
             <End Role="Outfits" EntitySet="Outfits" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="WardrobeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -145,7 +144,7 @@
           </Key>
           <Property Name="AccessoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Photo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Photo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Color" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Season" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
@@ -158,7 +157,7 @@
           </Key>
           <Property Name="BottomID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Photo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Photo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Color" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Season" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
@@ -176,7 +175,7 @@
           <Property Name="AccessoryID" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Accessory" Relationship="Self.FK_Outfits_Accessories" FromRole="Outfits" ToRole="Accessories" />
           <NavigationProperty Name="Bottom" Relationship="Self.FK_Outfits_Bottoms" FromRole="Outfits" ToRole="Bottoms" />
-          <NavigationProperty Name="Sho" Relationship="Self.FK_Outfits_Shoes" FromRole="Outfits" ToRole="Shoes" />
+          <NavigationProperty Name="Shoe" Relationship="Self.FK_Outfits_Shoes" FromRole="Outfits" ToRole="Shoes" />
           <NavigationProperty Name="Top" Relationship="Self.FK_Outfits_Tops" FromRole="Outfits" ToRole="Tops" />
         </EntityType>
         <EntityType Name="Shoe">
@@ -185,7 +184,7 @@
           </Key>
           <Property Name="ShoeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Photo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Photo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Color" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Season" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
@@ -198,7 +197,7 @@
           </Key>
           <Property Name="TopID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Photo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Photo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Color" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Season" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />

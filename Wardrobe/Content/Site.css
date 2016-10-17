@@ -1,6 +1,12 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-image: url('pexels-photo-92961.jpeg');
+    background-size:cover;
+    font-family: 'Pacifico', cursive;
+}
+footer{
+    color:oldlace;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -21,4 +27,33 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+.navbar-brand{
+    color:oldlace;
+    font-size:xx-large;
+}
+.navbar-nav >li >a{
+    color:oldlace;
+    font-size:xx-large;
+    align-items:center;
+}
+.navbar-nav > li >a:hover{
+    background-color:dimgrey;
+    opacity:1;
+    
+    
+}
+h2{
+    font-family:inherit;
+    color:orangered;
+    text-shadow:20px 20px 20px #000000;
+}
+.thumbnail{
+    background-color:oldlace;
+}
+span{
+    color:oldlace;
+}
+.navbar-link{
+    color:oldlace;
 }

@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\WeCanCodeIT\Documents\Visual Studio 2015\Projects\Wardrobe\Wardrobe\Models\Wardrobe.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\WeCanCodeIT\documents\visual studio 2015\Projects\wardrobe\Wardrobe\Models\Wardrobe.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.
