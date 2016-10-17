@@ -10,19 +10,19 @@
     @Html.ActionLink("Add Item", "Create")
 </p>
 <div class="row">
-    
-            @*@Html.DisplayNameFor(model => model.Name)
-        
-            @Html.DisplayNameFor(model => model.Photo)
-        
-            @Html.DisplayNameFor(model => model.Type)
-        
-            @Html.DisplayNameFor(model => model.Color)
-        
-            @Html.DisplayNameFor(model => model.Season)
-        
-            @Html.DisplayNameFor(model => model.Occassion)*@
-   
+
+    @*@Html.DisplayNameFor(model => model.Name)
+
+        @Html.DisplayNameFor(model => model.Photo)
+
+        @Html.DisplayNameFor(model => model.Type)
+
+        @Html.DisplayNameFor(model => model.Color)
+
+        @Html.DisplayNameFor(model => model.Season)
+
+        @Html.DisplayNameFor(model => model.Occassion)*@
+
 
     @foreach (var item in Model)
     {
@@ -31,23 +31,24 @@
                 <div class="caption">
                     @Html.DisplayFor(modelItem => item.Name)
 
-                    @Html.DisplayFor(modelItem => item.Photo)
-                    <img src="@Url.Content(@item.Photo)" />
+                   @if(item.Photo != null) { 
+                     
+                    <img src="@Url.Content(@item.Photo)" />}
 
                     @*@Html.DisplayFor(modelItem => item.Type)
 
-                    @Html.DisplayFor(modelItem => item.Color)
+                        @Html.DisplayFor(modelItem => item.Color)
 
-                    @Html.DisplayFor(modelItem => item.Season)
-                         
-                    @Html.DisplayFor(modelItem => item.Occassion)*@
+                        @Html.DisplayFor(modelItem => item.Season)
+
+                        @Html.DisplayFor(modelItem => item.Occassion)*@
 
                     @*@Html.ActionLink("Edit", "Edit", new { id = item.TopID })*@
-                    @Html.ActionLink("View", "Details", new { id = item.TopID })
-                    @*@Html.ActionLink("Delete", "Delete", new { id = item.TopID })*@
-                </div>
+                    @Html.ActionLink("View", "Details", new { id = item.TopID }) |
+                    @Html.ActionLink("Remove", "Delete", new { id = item.TopID })
                 </div>
             </div>
+        </div>
     }
 
 </div>

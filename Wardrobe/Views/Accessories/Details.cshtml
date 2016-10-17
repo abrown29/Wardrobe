@@ -20,11 +20,14 @@
 
         <dt>
             @Html.DisplayNameFor(model => model.Photo)
-            <img src="@Url.Content(@Model.Photo)" />
+            
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Photo)
+           @if (Model.Photo != null)
+           {
+
+            <img src="@Url.Content(@Model.Photo)" />}
         </dd>
 
         <dt>

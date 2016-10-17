@@ -203,14 +203,17 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\clothes-sweater-colors-wardrobe.jpg" />
-    <Content Include="Content\jeans-hipster-urban-will-milne.jpg" />
     <Content Include="Content\pexels-photo-92961.jpeg" />
-    <Content Include="Content\wood-pattern-ground-parquet-floor.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Content\Images\blackbowtank.jpg" />
+    <Content Include="Content\Images\blackgoldtop.jpg" />
+    <Content Include="Content\Images\greycardigan.jpg" />
+    <Content Include="Content\Images\greyheels.jpg" />
+    <Content Include="Content\Images\pusheenshirt.jpg" />
+    <Content Include="Content\Images\redtunic.jpg" />
     <Content Include="Models\Wardrobe.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Wardrobe.edmx</DependentUpon>

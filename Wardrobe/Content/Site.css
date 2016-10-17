@@ -57,3 +57,24 @@ span{
 .navbar-link{
     color:oldlace;
 }
+.control-label, dt{
+    color:orangered;
+    font-size:medium;
+    
+}
+dd{
+    color:oldlace;
+    font-size:medium;
+    
+}
+dl{
+    background-color:dimgray;
+}
+row{
+    margin:10px;
+}
+img{
+    justify-content:center;
+    position:center;
+    
+}

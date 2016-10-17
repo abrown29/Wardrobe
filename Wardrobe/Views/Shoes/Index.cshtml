@@ -31,8 +31,10 @@
                 <div class="caption">
                     @Html.DisplayFor(modelItem => item.Name)
 
-                    @Html.DisplayFor(modelItem => item.Photo)
-                    <img src="@Url.Content(@item.Photo)" />
+                    @if (item.Photo != null)
+                    {
+
+                        <img src="@Url.Content(@item.Photo)" />}
 
                     @*@Html.DisplayFor(modelItem => item.Type)
 
@@ -43,8 +45,8 @@
                         @Html.DisplayFor(modelItem => item.Occassion)*@
 
                     @*@Html.ActionLink("Edit", "Edit", new { id = item.ShoeID })*@
-                    @Html.ActionLink("View", "Details", new { id = item.ShoeID }) 
-                    @*@Html.ActionLink("Delete", "Delete", new { id = item.ShoeID })*@
+                    @Html.ActionLink("View", "Details", new { id = item.ShoeID }) |
+                    @Html.ActionLink("Remove", "Delete", new { id = item.ShoeID })
                 </div>
             </div>
         </div>
